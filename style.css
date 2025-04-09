@@ -141,8 +141,6 @@
     font-family: var(--bodytext-font);
     color: var(--bodytext-color); 
     background-color: var(--main-bg-color);
-    line-height: 1.4;
-    padding: 1rem;
   }
 
 
@@ -153,6 +151,15 @@
     font-style: normal;
   }
   
+  figcaption {
+    font-size: .8584em;
+    text-align: right;
+    font-style: italic;
+    margin-top: 0;
+
+    position: relative; /* when margins are zero, you can still tweak */
+    top: -0.3rem;
+}
   
 header {
     background-color: var(--header-bg-color);
@@ -212,8 +219,16 @@ header .branding {
  aside {
     font-size: small;
  }
+ 
+/* SPACING */
+ body {
+  line-height: 1.4;
+}
 
-  h1 {margin: 2rem 0 2rem 0;}
+h1 {
+  margin: 2em 0 2em 0;
+  line-height:1.2;
+}
 
   h2 {margin: 2rem 0 0rem 0;}
 
@@ -225,9 +240,10 @@ header .branding {
 
   h6 {margin: 2rem 0 2rem 0;}
 
-  p {margin: 0rem 0 1rem 0;}
+  p {margin: 0rem 0 1rem 0;
+  line-height: 30px;}
 
-  h2+h3 {margin: 0rem 0 1rem 0;}
+  h2+h3 {margin: 0.25rem 0 1rem 0;}
   
   h3+h4 {margin: 0rem 0 2rem 0;}
 
@@ -235,9 +251,13 @@ header .branding {
   
   figcaption {}
   
-  h2+p {}
+  h2+p {margin: 2rem 0 2rem 0;}
+  h2:has(+ p) {
+    font-size: 2.875em;
+}
+  ul:has(+p) {margin: 0rem 0 1.75rem 0;}
   
-  H2+ul, h2+ol {}
+  H2+ul {}
   
   h2+iframe {}
   
@@ -247,9 +267,9 @@ header .branding {
   
   h2+.gallery {}
   
-  h2+table {}
+  h2+ol {margin: 2rem 0 0 2rem 0;}
 
-  h2+h3 {}
+  h2+table {margin: 0.5rem 0 0 2rem 0;} 
   
   table {}
   
@@ -270,6 +290,8 @@ header .branding {
   form input:last-child {}
   
   .copyright {}
+
+  /* SPACING */
 
   footer {
     background-color: var(--footer-bg-color);
@@ -331,8 +353,15 @@ header .branding {
 .aligncenter {text-align: center;}  
 
 
+ul {
+  margin: 1rem 0 1rem 2rem;  /* note the 2rem at left */
+  list-style-type: disc;
+}
 
-
+ol {
+  margin: 1rem 0 1rem 2rem;
+  list-style-type: decimal;
+}
 
 
 /* ===================  START TOP NAV CODE ======================= */
@@ -492,6 +521,25 @@ ul#menu {
 
 
 /* ADD MORE MEDIA QUERIES AS NECESSARY */
+
+@media screen and (min-width: 60rem) {
+
+  /* TYPESCALE for DESKTOP: ADD CONTRAST   */
+  
+  h1 { font-size: 3.558em; }
+  h2 { font-size: 2.8796em; }
+  h3 { font-size: 2.3306em; }
+  h4 { font-size: 1.8863em; }
+  h5 { font-size: 1.5266em; }
+  h6 { font-size: 1.2356em; }
+  small { font-size: .8093em; }
+  
+  legend {font-size: 2.3306em; } /* h3 */
+  label {font-size: 1.8863em;}   /* h4 */
+  figcaption { font-size: .8093em;}  /* small */
+  
+  } /* always add a comment next to the closing media query bracket 
+       so you don't delete it accidentally */
 
 
 /* DO NOT WRITE ANYTHING BELOW THIS LINE */
