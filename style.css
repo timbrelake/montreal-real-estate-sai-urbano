@@ -125,6 +125,7 @@
     h4 { font-size: 1.3229em; }
     h5 { font-size: 1.2051em; }
     h6 { font-size: 1.0978em; }
+    p { font-size: 1.2rem;}
     small { font-size: .9109em; }
     html { font-size: .875em; }
   
@@ -226,15 +227,18 @@ header .branding {
 }
 
 h1 {
-  margin: 2em 0 2em 0;
-  line-height:1.2;
+  margin: 2em 1rem 2em 1rem;
+  line-height: 1.2;
 }
 
   h2 {margin: 2rem 0 0rem 0;}
 
   h3 {margin: 1rem 0 0rem 0;}
 
-  h4 {margin: 1.75rem 0 2rem 0;}
+  h4 {
+    /* margin: 1.75rem 0 2rem 0; */
+    margin: 3rem 0 1rem 0;
+    }
 
   h5 {margin: 2rem 0 2rem 0;}
 
@@ -243,7 +247,14 @@ h1 {
   p {margin: 0rem 0 1rem 0;
   line-height: 30px;}
 
-  h2:has(+ h3) {margin: 1.25rem 0 -1rem 0;}
+    h2:has(+ h3) {
+    /* margin: 1.25rem 0 -1rem 0; */
+    margin: 3rem 0 0rem 0;
+    }
+
+    h2 + h3 {
+      margin: 0.5rem 0 1rem 0;
+      }
   
   h3+h4 {margin: 0rem 0 2rem 0;}
 
@@ -252,6 +263,7 @@ h1 {
   figcaption {}
   
   h2+p {margin: 1.5 rem 0 2rem 0;}
+
   h2:has(+ p) {
     font-size: 2.875em;
 }
@@ -277,10 +289,26 @@ h1 {
   
   blockquote {}
   
-  h3:has(+ p) {margin: 1.5rem 0 0.75rem 0;}
+  h3:has(+ p) {
+    /* margin: 1.5rem 0 0.75rem 0; */
+    margin: 3rem 0 0.75rem 0;
+    }
   
   h4:has(+ ol) {margin: 2rem 0 1rem 0;}
   
+  ol {
+    margin: 1rem 0 1rem 2rem;
+    list-style-type: decimal;
+    line-height: 1.875rem;  
+    /* 30px line-height / 16px default font size = 1.875rems */
+}
+
+ul {
+    margin: 1rem 0 1rem 2rem;
+    list-style-type: disc;
+    line-height: 1.875rem;  /* use rems/ems not px as they do not scale */
+}
+
   section>h2 {}
   
   form label {}
@@ -433,14 +461,6 @@ ul#menu {
 
 @media screen and (min-width: 60rem) {
 
-    h1 { font-size: 3em; }
-    h2 { font-size: 2.498em; }
-    h3 { font-size: 2.0801em; }
-    h4 { font-size: 1.7321em; }
-    h5 { font-size: 1.4422em; }
-    h6 { font-size: 1.2009em; }
-    p { font-size: 1em; }
-    small { font-size: .8327em; }
   /* READJUST FONT SCALE BECAUSE YOU HAVE MORE ROOM NOW */  
 
 
@@ -528,7 +548,7 @@ ul#menu {
 
   /* TYPESCALE for DESKTOP: ADD CONTRAST   */
   
-  h1 { font-size: 3.558em; }
+ h1 { font-size: 3.558em; }
   h2 { font-size: 2.8796em; }
   h3 { font-size: 2.3306em; }
   h4 { font-size: 1.8863em; }
@@ -536,10 +556,9 @@ ul#menu {
   h6 { font-size: 1.2356em; }
   small { font-size: .8093em; }
   
-  legend {font-size: 2.3306em; } /* h3 */
-  label {font-size: 1.8863em;}   /* h4 */
-  figcaption { font-size: .8093em;}  /* small */
-  
+  legend {font-size: 2.3306em; }
+  label {font-size: 1.8863em;}   
+  figcaption { font-size: .8093em;}
   } /* always add a comment next to the closing media query bracket 
        so you don't delete it accidentally */
 
