@@ -233,11 +233,11 @@ h1 {
 
   h2 {margin: 2rem 0 0rem 0;}
 
-  h3 {margin: 1rem 0 0rem 0;}
+  h3 {margin: 1.5rem 0 1rem 0;}
 
   h4 {
     /* margin: 1.75rem 0 2rem 0; */
-    margin: 3rem 0 1rem 0;
+    margin: 1.5rem 0 1rem 0;
     }
 
   h5 {margin: 2rem 0 2rem 0;}
@@ -253,7 +253,7 @@ h1 {
     }
 
     h2 + h3 {
-      margin: 0.5rem 0 1rem 0;
+      margin: 0rem 0 1rem 0;
       }
   
   h3+h4 {margin: 0rem 0 2rem 0;}
@@ -289,10 +289,10 @@ h1 {
   
   blockquote {}
   
-  h3:has(+ p) {
-    /* margin: 1.5rem 0 0.75rem 0; */
-    margin: 3rem 0 0.75rem 0;
-    }
+  /* h3:has(+ p) {
+    /* margin: 1.5rem 0 0.75rem 0;
+    margin: 0rem 0 0.75rem 0;
+    } */
   
   h4:has(+ ol) {margin: 2rem 0 1rem 0;}
   
